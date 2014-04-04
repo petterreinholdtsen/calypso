@@ -184,7 +184,7 @@ def propfind(path, xml_request, collection, resource, depth, context):
             elif tag == _tag("D", "getetag"):
                 element.text = item.etag
             elif tag == _tag("D", "displayname") and is_collection:
-                element.text = collection.name
+                element.text = item.get_displayname()
             elif tag == _tag("E", "calendar-color") and is_collection:
                 element.text = item.get_color()
             elif tag == _tag("D", "principal-URL"):
