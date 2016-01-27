@@ -1,0 +1,48 @@
+BEGIN:VCALENDAR
+PRODID:Zimbra-Calendar-Provider
+VERSION:2.0
+METHOD:REQUEST
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+BEGIN:STANDARD
+DTSTART:19710101T020000
+TZOFFSETTO:-0800
+TZOFFSETFROM:-0700
+RRULE:FREQ=YEARLY;WKST=MO;INTERVAL=1;BYMONTH=11;BYDAY=1SU
+TZNAME:PST
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19710101T020000
+TZOFFSETTO:-0700
+TZOFFSETFROM:-0800
+RRULE:FREQ=YEARLY;WKST=MO;INTERVAL=1;BYMONTH=3;BYDAY=2SU
+TZNAME:PDT
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:f3daaffd-11a7-4606-aff0-48adbd733581
+SUMMARY:Invitation for pertnership\,
+DESCRIPTION:Invitation for pertnership\,\n\nI am financial broker and interm
+ ediary. The investor l have on my list are interested on a JV equity investm
+ ent or a direct private bridge financing on form of a long term loan provide
+ d the interest rate can meet up to 1.5% ROI annually.\n\nThe investors I hav
+ e can fund to the tune of $ 100 Million USD at maximum. They are equally wil
+ ling to move the funding as quickly as possible. Kindly provide me with full
+  business details for further discussions. Once I receive the full business 
+ plan\, I will in return provide the investors loan term sheet for your revie
+ w. Do you have a number I can reach you with?\nI wait your response.\n\nRega
+ rds\nDr.Mark Dolfo
+ATTENDEE;RSVP=TRUE:mailto:pkg-exim4-maintainers@example.org
+ATTENDEE;RSVP=TRUE:mailto:pkg-fdt-tools-team@example.org
+ORGANIZER;CN=Dr.Mark Dolfo:mailto:dr.dofus@example.org
+DTSTART;TZID="America/Los_Angeles":20131107T093000
+DTEND;TZID="America/Los_Angeles":20131107T103000
+STATUS:CONFIRMED
+CLASS:PUBLIC
+X-MICROSOFT-CDO-INTENDEDSTATUS:BUSY
+TRANSP:OPAQUE
+X-MICROSOFT-DISALLOW-COUNTER:TRUE
+DTSTAMP:20131107T112604Z
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR

@@ -41,3 +41,18 @@ class TestCollection(unittest.TestCase):
         c = paths.collection_from_path(veventuid)
         self.assertTrue(r == veventuid)
         self.assertTrue("/" == c)
+
+    def test_various_client_formats(self):
+        testdata = [
+            "tests/data/from-google-calendar-70.ics",
+            "tests/data/from-lotus-notes-6.ics",
+            "tests/data/from-mozilla-calendar-1.ics",
+            "tests/data/from-tripsync.ics",
+            "tests/data/from-zimbra-calendar.ics",
+            "tests/data/from-lotus-notes-8.ics",
+        ]
+        os.mkdir(os.path.join(self.tmpdir, "clients"))
+        collection = Collection("/clients")
+        for f in testdata:
+            self.assertTrue(collection.import_file(f))
+        self.assertEqual(len(collection.items), 6)
