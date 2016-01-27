@@ -368,11 +368,11 @@ class Collection(acl.Entity):
             # information explicitly in the config file. (slicing it in after
             # the git command as position is important with git arguments)
             args[1:1] = ["-c", "advice.implicitIdentity=false"]
-        if context['user-agent']:
+        if 'user-agent' in context and context['user-agent']:
             message += u"User-Agent: %r\n"%context['user-agent']
-        if context['x-client']:
+        if 'x-client' in context and context['x-client']:
             message += u"X-Client: %r\n"%context['x-client'] # set by web clients like carddavmate / caldavzap
-        if context['origin']:
+        if 'origin' in context and context['origin']:
             message += u"Origin: %r\n"%context['origin'] # set by everything that does CORS XHR
 
         args.extend(["-m", message.encode('utf8').rstrip("\n") + "\n"])
